@@ -12,10 +12,10 @@ def create_bitmap_image(file_path, width=200, height=200):
     image.save(file_path)
 
 # Generate bitmap files
-how_many = 10
+how_many = 50
 for i in range(1, how_many+1):
     numero = str(i).zfill(len(str(how_many)))
-    create_bitmap_image(f'trialin/test_image_{numero}.bmp')
+    create_bitmap_image(f'trialin/test_image_{numero}.bmp', np.random.randint(1,500), np.random.randint(1,500))
 
 # List generated files
 os.listdir('trialin')
